@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="all">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>购房税费计算器2026_契税计算器_二手房税费怎么算</title>
+    <link rel="canonical" href="https://www.fangdailix.top/shuifei.html" />
+    <meta property="og:url" content="https://www.fangdailix.top/shuifei.html" />
+    <meta property="og:site_name" content="www.fangdailix.top" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="购房税费计算器,契税计算器,二手房税费计算,新房契税,满五唯一税费,增值税个人所得税,购房税费2026" />
+    <meta name="description" content="购房税费计算器按2024年第16号公告的140平方米分档契税，以及二手房增值税、个人所得税、印花税规则，分别测算新房和二手房买卖双方税费。" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./static/style/common.css">
+    <link rel="stylesheet" href="./static/style/index.css" />
+    <link rel="stylesheet" href="./static/style/extra.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="mod-head">
+                <div class="bd">
+                    <div class="inner">
+                        <a class="logo" href="./index.html">
+                            <img src="./static/image/logo.png" alt="房贷计算器">
+                        </a>
+                        <nav>
+                            <ul>
+                                <li><a href="./index.html">商业贷款</a></li>
+                                <li><a href="./gongjijin.html">公积金贷款</a></li>
+                                <li><a href="./zuhedai.html">组合贷款</a></li>
+                                <li><a href="./zhuangxiu.html">装修贷款</a></li>
+                                <li><a href="./huankuan.html">提前还贷</a></li>
+                                <li><a href="./tiaoxi.html">利率变动</a></li>
+                                <li><a href="./fansuan.html">贷款反算</a></li>
+                                <li class="active"><a href="./shuifei.html">购房税费</a></li>
+                                <li><a href="./pinggu.html">购房评估</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-tip">
+                <div class="bd">计算结果仅供参考</div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="layout-container inner">
+                <main class="main">
+                    <section class="mod-panel">
+                        <div class="hd">
+                            <h1>
+                                <img src="./static/image/icon-hd.png" width="32" height="32" />
+                                <span>购房税费计算器</span>
+                            </h1>
+                        </div>
+                        <div class="bd">
+                            <div id="input" class="input-group">
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>房产性质</span></div>
+                                    <div class="input-content">
+                                        <label>
+                                            <input type="radio" name="houseMode" value="new" checked="checked">
+                                            <span>新房</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="houseMode" value="old">
+                                            <span>二手房</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="J_houseMode" data-mode="new">
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>买房家庭</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="new_houseCount" value="1" checked="checked">
+                                                <span>首套房</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="new_houseCount" value="2">
+                                                <span>二套房</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="new_houseCount" value="3">
+                                                <span>三套及以上</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>房屋类型</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="new_houseType" value="1" checked="checked">
+                                                <span>多层</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="new_houseType" value="2">
+                                                <span>小高层</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="new_houseType" value="3">
+                                                <span>高层</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title">房屋面积</div>
+                                        <div class="input-content">
+                                            <input type="number" name="new_houseAcreage" value="" step="0.01" min="0" />
+                                            <span>㎡</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title">房屋总价</div>
+                                        <div class="input-content">
+                                            <div class="field-row">
+                                                <input class="J_formatMoney" type="number" name="new_houseAmount"
+                                                    value="" step="1" min="0" />
+                                                <span>元</span>
+                                            </div>
+                                            <div class="field-row field-tip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="J_houseMode" data-mode="old">
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>房屋类型</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="old_houseType" value="1" checked="checked">
+                                                <span>普通住宅</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_houseType" value="2">
+                                                <span>非普通住宅</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>买房家庭</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="old_houseCount" value="1" checked="checked">
+                                                <span>首套房</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_houseCount" value="2">
+                                                <span>二套房</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_houseCount" value="3">
+                                                <span>三套及以上</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>卖房家庭</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="old_houseOnly" value="0" checked="checked">
+                                                <span>非唯一住房</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_houseOnly" value="1">
+                                                <span>唯一住房</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>房产年限</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="old_housePeriod" value="1" checked="checked">
+                                                <span>2年以内</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_housePeriod" value="2">
+                                                <span>2-5年（不含5年）</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_housePeriod" value="3">
+                                                <span>5年及以上</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title"><span>个税计征</span></div>
+                                        <div class="input-content">
+                                            <label>
+                                                <input type="radio" name="old_taxMode" value="total" checked="checked">
+                                                <span>总价</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="old_taxMode" value="diff">
+                                                <span>差额</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title">房屋面积</div>
+                                        <div class="input-content">
+                                            <input type="number" name="old_houseAcreage" value="" step="0.01" min="0" />
+                                            <span>㎡</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title">房屋总价</div>
+                                        <div class="input-content">
+                                            <div class="field-row">
+                                                <input class="J_formatMoney" type="number" name="old_houseAmount"
+                                                    value="" step="1" min="0" />
+                                                <span>元</span>
+                                            </div>
+                                            <div class="field-row field-tip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <div class="input-title">房屋原价</div>
+                                        <div class="input-content">
+                                            <div class="field-row">
+                                                <input class="J_formatMoney" type="number" name="old_houseSell" value=""
+                                                    step="1" min="0" />
+                                                <span>元</span>
+                                            </div>
+                                            <div class="field-row field-tip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="result" class="input-wrapper">
+                                <div class="input-content">
+                                    <button class="J_computeFee btn">计算</button>
+                                    <button class="J_resetPanel btn btn-gray">重置</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ft">
+                            <div class="result">
+                                <div class="box">
+                                    <div class="c-hd">计算结果</div>
+                                    <div class="c-bd">
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">契税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_deedTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip">买方缴纳，双方另有约定除外</span>
+                                            </div>
+                                        </div>
+                                        <div class="J_houseMode field-wrapper field-wrapper-1" data-mode="old">
+                                            <div class="field-title">增值税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_valueTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip">卖方缴纳，双方另有约定除外</span>
+                                            </div>
+                                        </div>
+                                        <div class="J_houseMode field-wrapper field-wrapper-1" data-mode="old">
+                                            <div class="field-title">个人所得税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_incomeTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip">卖方缴纳，双方另有约定除外</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">印花税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_stampTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="J_houseMode field-wrapper field-wrapper-1" data-mode="new">
+                                            <div class="field-title">公共维修基金</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_fixTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">总计</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_totalPay" value="" readonly="readonly">
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <aside class="side">
+                    <section class="mod-rate">
+                        <div class="bd">
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-bank.png" width="20" height="20" alt="人民银行">
+                                            <a href="./lilv.html">央行最新商业贷款基准利率(LPR)</a>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a class="more" href="./lilv.html" target="_blank">房贷利率</a>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年期</td>
+                                            <td>3.00%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>3.50%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2026年08月20日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-interest.png" width="20" height="20"
+                                                alt="银行利息">
+                                            <span>商业贷款基准利率(2019年以前)</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年以内(含1年)</td>
+                                            <td>4.35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1年至5年(含5年)</td>
+                                            <td>4.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>4.9</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-house.png" width="20" height="20" alt="房屋贷款">
+                                            <span>住房公积金个人住房贷款利率</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="40%">年限</th>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5年以下(含5年)</td>
+                                            <td>2.1%</td>
+                                            <td>2.525%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>2.60%</td>
+                                            <td>3.075%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2025年5月7日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-ratio.png" width="20" height="20" alt="房屋贷款">
+                                            <span>商业住房贷款最低首付款比例</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>15%</td>
+                                            <td>15%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2024年9月24日更新</p>
+                            </div>
+                        </div>
+                    </section>
+                </aside>         
+            </div>
+            <div class="inner">
+                <section class="mod-intro">
+                    <div class="box">
+                        <h3>
+                            <img src="./static/image/icon-hd3.png" width="32" height="32" alt="房贷计算器">
+                            <span>购房税费计算器2026（契税+二手房税费）</span>
+                        </h3>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年新房购置税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th colspan="2">条件</th>
+                                        <th>征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="6" class="th">买方</td>
+                                        <td rowspan="5" class="th">契税</td>
+                                        <td rowspan="2">一套</td>
+                                        <td>140㎡以下</td>
+                                        <td>1%</td>
+                                        <td rowspan="5">
+                                            <p>财税[2016] 36号</p>
+                                            <p>契税法</p>
+                                            <p>财政部 税务总局 住房城乡建设部公告2024年第16号</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>140㎡以上</td>
+                                        <td>1.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">二套</td>
+                                        <td>140㎡以下</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>140㎡以上</td>
+                                        <td>2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>三套及以上</td>
+                                        <td></td>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td colspan="2">-</td>
+                                        <td>0.05%</td>
+                                        <td rowspan="5">财税[2008] 137号</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年新房购置其他费用明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">费用</th>
+                                        <th colspan="2">条件</th>
+                                        <th>征收率</th>
+                                        <th width="240">收费依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3" class="th">买方</td>
+                                        <td rowspan="3" class="th">专项维修基金</td>
+                                        <td colspan="2">多层</td>
+                                        <td>50元/平方米</td>
+                                        <td rowspan="3">住宅专项维修资金管理办法</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">小高层</td>
+                                        <td>70元/平方米</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">高层</td>
+                                        <td>85元/平方米</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>最新《中华人民共和国契税法》2020年8月11日通过，自2022年9月1日起施行，对现行的契税政策及契税利率影响不大。</p>
+                        <p>1-3层称低层、4-7层为多层、8-12层为小高层、12层以上为高层、总高度为100米以上为超高层。按规定7层以上必须配电梯。</p>
+                        <ul>
+                            <li>1. 购买商业房，商住两用房子，都不会占用购房名额；70年住宅会占用购房名额；</li>
+                            <li>2. 住宅以外的房产不限购不限贷；</li>
+                            <li>3. 产权70年面积小于144平米的叫普通住宅，大于144平米的叫非普通住宅；</li>
+                            <li>4. 产权为70年住宅首付低，贷款年限最长30年；住宅以外的房产首付50%，并且贷款年限最多10年，银行利息会上浮；</li>
+                            <li>5. 只有70年住宅能落户口，其他都落不了；</li>
+                            <li>6. 产权为40年的公寓也参考商用房标准缴纳税费；</li>
+                        </ul>
+                        <br/>
+                        <h3>个人房产涉税分析（含继承、赠与、婚内更名等）</h3>
+                        <h4>一、 住房买卖</h4>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年住房买卖税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th colspan="2">条件</th>
+                                        <th>征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th" rowspan="11">卖方</td>
+                                        <td class="th" rowspan="2">个人所得税</td>
+                                        <td colspan="2">“满五唯一”</td>
+                                        <td>免征</td>
+                                        <td>财税[1994] 20号</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">其他房产</td>
+                                        <td>
+                                            <p>1%（全额）</p>
+                                            <p>20%（差额）</p>
+                                        </td>
+                                        <td>个人所得税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="6">增值税</td>
+                                        <td colspan="2">销售自建自用住房</td>
+                                        <td>免征</td>
+                                        <td rowspan="6">财税[2016] 36号</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">北上广深地区</td>
+                                        <td>购买不足2年</td>
+                                        <td>5%（全额）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买2年及以上的非普通住房</td>
+                                        <td>5%（差额）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买2年及以上的普通住房</td>
+                                        <td>免征</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">非北上广深地区</td>
+                                        <td>购买不足2年</td>
+                                        <td>5%（全额）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买2年及以上</td>
+                                        <td>免征</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">附加税</td>
+                                        <td colspan="2">-</td>
+                                        <td>小规模纳税人减半征收</td>
+                                        <td>财政部 税务总局公告 2022年第10号</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td class="th">土地增值税</td>
+                                        <td colspan="2">-</td>
+                                        <td>免征</td>
+                                        <td rowspan="2">财税[2008] 137号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td colspan="2">-</td>
+                                        <td>免征</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="7">买方</td>
+                                        <td class="th" rowspan="5">契税</td>
+                                        <td rowspan="2">一套</td>
+                                        <td>140㎡以下</td>
+                                        <td>1%</td>
+                                        <td rowspan="5">
+                                            <p>财税[2016] 36号</p>
+                                            <p>契税法</p>
+                                            <p>财政部 税务总局 住房城乡建设部公告2024年第16号</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>140㎡以上</td>
+                                        <td>1.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">二套</td>
+                                        <td>140㎡以下</td>
+                                        <td>1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>140㎡以上</td>
+                                        <td>2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>三套及以上</td>
+                                        <td></td>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td colspan="2">-</td>
+                                        <td>免征</td>
+                                        <td>财税[2008] 137号</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h5>注：</h5>
+                        <ul>
+                            <li>小规模纳税人附加税减半征收政策截至2024年12月31日。</li>
+                            <li>“满五唯一”指自用5年以上、并且是家庭唯一生活用房。满五指的是从取得产权证的日期算起，持有该房产的时间已经大于等于5年，如果说房产证还没有办下来的话，也可以按照缴纳契税发票上的日期算起。</li>
+                            <li>2024年11月18日上海市住建委发布关于取消普通住房标准有关事项的通知，自2024年12月1日起，取消取消普通住房和非普通住房标准。</li>
+                        </ul>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年住房买卖其他费用明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">费用</th>
+                                        <th colspan="2">条件</th>
+                                        <th width="25%">征收率</th>
+                                        <th width="240">收费依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th">双方共同承担</td>
+                                        <td class="th">买卖中介费</td>
+                                        <td colspan="2">-</td>
+                                        <td>2%-3%</td>
+                                        <td rowspan="7">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="6">买方</td>
+                                        <td class="th" rowspan="2">土地出让金</td>
+                                        <td colspan="2">出让性质土地</td>
+                                        <td>免征</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">划拨性质土地</td>
+                                        <td>约1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="2">银行评估费</td>
+                                        <td colspan="2">全款</td>
+                                        <td>免费</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">贷款</td>
+                                        <td>0.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="2">工本费</td>
+                                        <td colspan="2">住宅</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">非住宅</td>
+                                        <td>550</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>二、住房赠与</h4>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年住房赠与税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th>条件</th>
+                                        <th width="60">征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th" rowspan="6">赠与方</td>
+                                        <td class="th" rowspan="4">增值税</td>
+                                        <td>无偿赠与配偶、父母、子女、祖父母、外租父母、孙子女、外孙子女、兄弟姐妹</td>
+                                        <td rowspan="3">免征</td>
+                                        <td rowspan="4">财税[2016] 36号</td>
+                                    </tr>
+                                    <tr>
+                                        <td>无偿赠与对其承担直接抚养或者赠养义务的扶养人或者赡养人</td>
+                                    </tr>
+                                    <tr>
+                                        <td>向其他单位或者个人无偿转让无形资产或者不动产，用于公益事业或者以社会公众为对象</td>
+                                    </tr>
+                                    <tr>
+                                        <td>其他形式</td>
+                                        <td>视同买卖</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">土地增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财税[2008] 137号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td>-</td>
+                                        <td>0.5‰</td>
+                                        <td>印花税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="6">受赠方</td>
+                                        <td class="th" rowspan="4">个人所得税</td>
+                                        <td>无偿赠与配偶、父母、子女、祖父母、外租父母、孙子女、外孙子女、兄弟姐妹</td>
+                                        <td rowspan="3">免征</td>
+                                        <td rowspan="4">财政部 税务总局公告 2019年第74号</td>
+                                    </tr>
+                                    <tr>
+                                        <td>无偿赠与对其承担直接抚养或者赠养义务的扶养人或者赡养人</td>
+                                    </tr>
+                                    <tr>
+                                        <td>向其他单位或者个人无偿转让无形资产或者不动产，用于公益事业或者以社会公众为对象</td>
+                                    </tr>
+                                    <tr>
+                                        <td>其他形式</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">契税</td>
+                                        <td>-</td>
+                                        <td>3%</td>
+                                        <td>契税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td>-</td>
+                                        <td>0.5‰</td>
+                                        <td>印花税法</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h5>注：</h5>
+                        <ul>
+                            <li>其他形式无转让价格的，由税务机关核定。</li>
+                        </ul>
+                        <h4>三、住房继承</h4>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年住房继承税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th>条件</th>
+                                        <th width="25%">征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th" rowspan="6">继承人</td>
+                                        <td class="th">增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财税[2016] 36号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">土地增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财法字[1995] 6号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">个人所得税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财税[2009] 78号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="2">契税</td>
+                                        <td>法定继承人</td>
+                                        <td>免征</td>
+                                        <td>契税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td>非法定继承人</td>
+                                        <td>3%</td>
+                                        <td>国税函[2004] 1036号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td>-</td>
+                                        <td>0.5‰</td>
+                                        <td>印花税法</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>四、夫妻婚内住房更名</h4>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年夫妻婚内住房更名税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th>条件</th>
+                                        <th width="25%">征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th" rowspan="6">夫妻双方</td>
+                                        <td class="th">增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财税[2016] 36号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">土地增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财法字[1995] 6号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">个人所得税</td>
+                                        <td>-</td>
+                                        <td>不征</td>
+                                        <td>财税[2009] 78号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">契税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>契税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td>-</td>
+                                        <td>不征</td>
+                                        <td>印花税法</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>五、夫妻离婚房产分割</h4>
+                        <div class="table-inner">
+                            <table>
+                                <caption>2026年夫妻离婚房产分割税费明细表</caption>
+                                <thead>
+                                    <tr>
+                                        <th width="12%">征收对象</th>
+                                        <th width="12%">税种</th>
+                                        <th>条件</th>
+                                        <th width="25%">征收率</th>
+                                        <th width="240">政策依据</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="th" rowspan="4">夫妻双方</td>
+                                        <td class="th">增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财税[2016] 36号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">土地增值税</td>
+                                        <td>-</td>
+                                        <td>免征</td>
+                                        <td>财法字[1995] 6号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">个人所得税</td>
+                                        <td>-</td>
+                                        <td>不征</td>
+                                        <td>国税发[2009] 121号</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th">印花税</td>
+                                        <td>-</td>
+                                        <td>0.5‰</td>
+                                        <td>印花税法</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="th" rowspan="2">取得房产的一方</td>
+                                        <td class="th" rowspan="2">契税</td>
+                                        <td>夫妻共有房产归属一方</td>
+                                        <td>免征</td>
+                                        <td>财政部 税务总局公告 2021年第29号</td>
+                                    </tr>
+                                    <tr>
+                                        <td>夫妻一方婚前房屋归于另一方</td>
+                                        <td>3%</td>
+                                        <td>契税法</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="inner">
+                <div class="mod-foot">
+                    <div class="bd">
+                                                <p class="link">
+                            <a href="./index.html">房贷计算器</a>
+                            <a href="./gongjijin.html">公积金贷款计算器</a>
+                            <a href="./zuhedai.html">组合贷款计算器</a>
+                            <a href="./huankuan.html">提前还贷计算器</a>
+                            <a href="./tiaoxi.html">利率下调计算器</a>
+                            <a href="./fansuan.html">房贷反算</a>
+                            <a href="./shuifei.html">购房税费计算器</a>
+                            <a href="./pinggu.html">购房能力评估</a>
+                            <a href="./lilv.html">最新LPR利率</a>
+                            <a href="./daikuanedu.html">公积金贷款额度</a>
+                            <a href="./zhuangxiu.html">装修贷款计算器</a>
+                        </p>
+                        <p>
+                            <a href="https://www.fangdailix.top/">www.fangdailix.top</a>
+                            <span>Copyright &copy; 2026</span>
+                            <span>在线房贷计算器 · 结果仅供参考</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mod-fixedbar">
+                    <div class="bd">
+                        <a class="goback" href="#" rel="nofollow">返回顶部</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+        <script src="./static/script/calc.js"></script>
+    <script src="./static/script/app.js"></script>
+</body>
+</html>

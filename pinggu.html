@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="all">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>购房能力评估_我能买多少钱的房子_买房预算计算器</title>
+    <link rel="canonical" href="https://www.fangdailix.top/pinggu.html" />
+    <meta property="og:url" content="https://www.fangdailix.top/pinggu.html" />
+    <meta property="og:site_name" content="www.fangdailix.top" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="购房能力评估,我能买多少钱的房子,买房预算计算器,购房资格评估,首付月供算房价" />
+    <meta name="description" content="购房能力评估根据现有首付和可承受月供，按最新LPR等额本息反算可购房总价和单价，并估算契税、印花税和维修基金，帮你判断买得起什么价位的房子。" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./static/style/common.css">
+    <link rel="stylesheet" href="./static/style/index.css" />
+    <link rel="stylesheet" href="./static/style/extra.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="mod-head">
+                <div class="bd">
+                    <div class="inner">
+                        <a class="logo" href="./index.html">
+                            <img src="./static/image/logo.png" alt="房贷计算器">
+                        </a>
+                        <nav>
+                            <ul>
+                                <li><a href="./index.html">商业贷款</a></li>
+                                <li><a href="./gongjijin.html">公积金贷款</a></li>
+                                <li><a href="./zuhedai.html">组合贷款</a></li>
+                                <li><a href="./zhuangxiu.html">装修贷款</a></li>
+                                <li><a href="./huankuan.html">提前还贷</a></li>
+                                <li><a href="./tiaoxi.html">利率变动</a></li>
+                                <li><a href="./fansuan.html">贷款反算</a></li>
+                                <li><a href="./shuifei.html">购房税费</a></li>
+                                <li class="active"><a href="./pinggu.html">购房评估</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-tip">
+                <div class="bd">计算结果仅供参考</div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="layout-container inner">
+                <main class="main">
+                    <section class="mod-panel">
+                        <div class="hd">
+                            <h1>
+                                <img src="./static/image/icon-hd.png" width="32" height="32" />
+                                <span>购房能力评估计算器</span>
+                            </h1>
+                        </div>
+                        <div class="bd">
+                            <div id="input" class="input-group">
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>现有购房资金</span></div>
+                                    <div class="input-content">
+                                        <div class="field-wrapper">
+                                            <div class="field-row">
+                                                <input class="J_formatMoney" type="number" name="firstPay" value=""
+                                                    step="1" min="0" />
+                                                <span>元</span>
+                                            </div>
+                                            <div class="field-row field-tip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>每月购房支出</span></div>
+                                    <div class="input-content">
+                                        <input class="J_formatMoney" type="number" name="monthPay" value="" step="1"
+                                            min="0" />
+                                        <span>元</span>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>期望贷款期限</span></div>
+                                    <div class="input-content">
+                                        <div class="field-wrapper">
+                                            <select name="loanPeriod">
+                                                <option value="0">自定义贷款期限</option>
+                                                <option value="12">1年(12期)</option>
+                                                <option value="24">2年(24期)</option>
+                                                <option value="36">3年(36期)</option>
+                                                <option value="48">4年(48期)</option>
+                                                <option value="60">5年(60期)</option>
+                                                <option value="72">6年(72期)</option>
+                                                <option value="84">7年(84期)</option>
+                                                <option value="96">8年(96期)</option>
+                                                <option value="108">9年(108期)</option>
+                                                <option value="120">10年(120期)</option>
+                                                <option value="132">11年(132期)</option>
+                                                <option value="144">12年(144期)</option>
+                                                <option value="156">13年(156期)</option>
+                                                <option value="168">14年(168期)</option>
+                                                <option value="180">15年(180期)</option>
+                                                <option value="192">16年(192期)</option>
+                                                <option value="204">17年(204期)</option>
+                                                <option value="216">18年(216期)</option>
+                                                <option value="228">19年(228期)</option>
+                                                <option value="240">20年(240期)</option>
+                                                <option value="252">21年(252期)</option>
+                                                <option value="264">22年(264期)</option>
+                                                <option value="276">23年(276期)</option>
+                                                <option value="288">24年(288期)</option>
+                                                <option value="300">25年(300期)</option>
+                                                <option value="312">26年(312期)</option>
+                                                <option value="324">27年(324期)</option>
+                                                <option value="336">28年(336期)</option>
+                                                <option value="348">29年(348期)</option>
+                                                <option value="360" selected="selected">30年(360期)</option>
+                                            </select>
+                                            <input type="number" name="customPeriod" placeholder="输入贷款期限(月)" step="1"
+                                                min="1" max="360" style="display: none;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title">计划购房面积</div>
+                                    <div class="input-content">
+                                        <input type="number" name="houseAcreage" value="" step="0.01" min="0">
+                                        <span>㎡</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="result" class="input-group">
+                                <div class="input-wrapper">
+                                    <div class="input-content">
+                                        <button class="J_computeFee btn">计算</button>
+                                        <button class="J_resetPanel btn btn-gray">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ft">
+                            <div class="result">
+                                <div class="box">
+                                    <div class="c-hd">计算结果</div>
+                                    <div class="c-bd">
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">可购房总价</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_houseAmount" value=""
+                                                    readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">可购房单价</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_housePrice" value=""
+                                                    readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">契税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_deedTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">印花税</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_stampTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-1">
+                                            <div class="field-title">公共维修基金</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_fixTax" value="" readonly="readonly">
+                                                <span>元</span>
+                                                <span class="tip"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <aside class="side">
+                    <section class="mod-rate">
+                        <div class="bd">
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-bank.png" width="20" height="20" alt="人民银行">
+                                            <a href="./lilv.html">央行最新商业贷款基准利率(LPR)</a>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a class="more" href="./lilv.html" target="_blank">房贷利率</a>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年期</td>
+                                            <td>3.00%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>3.50%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2026年08月20日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-interest.png" width="20" height="20"
+                                                alt="银行利息">
+                                            <span>商业贷款基准利率(2019年以前)</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年以内(含1年)</td>
+                                            <td>4.35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1年至5年(含5年)</td>
+                                            <td>4.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>4.9</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-house.png" width="20" height="20" alt="房屋贷款">
+                                            <span>住房公积金个人住房贷款利率</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="40%">年限</th>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5年以下(含5年)</td>
+                                            <td>2.1%</td>
+                                            <td>2.525%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>2.60%</td>
+                                            <td>3.075%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2025年5月7日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-ratio.png" width="20" height="20" alt="房屋贷款">
+                                            <span>商业住房贷款最低首付款比例</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>15%</td>
+                                            <td>15%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2024年9月24日更新</p>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+            <div class="inner">
+                <section class="mod-intro">
+                    <div class="box">
+                        <h3>
+                            <img src="./static/image/icon-hd4.png" width="32" height="32" />
+                            <span>购房能力评估：按首付和月供算买得起多少钱</span>
+                        </h3>
+                        <p>把现有购房资金当成首付、把每月可承担还款当成月供，本页按最新五年期LPR等额本息反算可贷额度，再加总得到可购房总价和单价，并估算契税、印花税和专项维修基金。</p>
+                        <h3>如何评估自己的购房能力</h3>
+                        <p><strong>收入状况：</strong>您和家人的月收入，并考虑固定和可变的支出，例如生活费用、债务偿还和其他开销。确保购房支出在您月收入的合理范围内。 </p>
+                        <p><strong>首付能力：</strong>根据当地的市场情况和政策要求，确定购房首付款的比例。并确保您有足够的储蓄或其他资金来源来支付首付款。 </p>
+                        <p><strong>贷款压力：</strong>了解您的信用状况和收入水平，以确定您能够获得的贷款金额。同时，使用贷款计算工具来估算每月的负债和利息支出，确保还款额度在可承受范围内。
+                        </p>
+                        <p><strong>未来规划：</strong>考虑您和家人的未来计划，如婚姻、生育、教育负担等，以及其他可能的经济风险和变动。确保购房决策与个人和家庭的长远规划相符。 </p>
+                        <p><strong>市场调研：</strong>了解当地的房价趋势、供需情况和政策限制，以便更好地预估购房成本和可能面临的变化。咨询专业的房产经纪人或进行市场研究，以获得准确的市场信息。
+                        </p>
+                        <br>
+                        <p>购房能力评估需要全面考虑个人收入、首付款能力、贷款承受能力、未来规划和地区市场情况等因素。了解自己的购房能力可以帮助您做出明智的决策，确保购房符合个人财务状况和长期规划。建议在购房决策之前，与专业人士咨询，以获得准确的信息和建议。记住，购房是一项重要的投资决策，理性判断非常重要。
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="inner">
+                <div class="mod-foot">
+                    <div class="bd">
+                                                <p class="link">
+                            <a href="./index.html">房贷计算器</a>
+                            <a href="./gongjijin.html">公积金贷款计算器</a>
+                            <a href="./zuhedai.html">组合贷款计算器</a>
+                            <a href="./huankuan.html">提前还贷计算器</a>
+                            <a href="./tiaoxi.html">利率下调计算器</a>
+                            <a href="./fansuan.html">房贷反算</a>
+                            <a href="./shuifei.html">购房税费计算器</a>
+                            <a href="./pinggu.html">购房能力评估</a>
+                            <a href="./lilv.html">最新LPR利率</a>
+                            <a href="./daikuanedu.html">公积金贷款额度</a>
+                            <a href="./zhuangxiu.html">装修贷款计算器</a>
+                        </p>
+                        <p>
+                            <a href="https://www.fangdailix.top/">www.fangdailix.top</a>
+                            <span>Copyright &copy; 2026</span>
+                            <span>在线房贷计算器 · 结果仅供参考</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mod-fixedbar">
+                    <div class="bd">
+                        <a class="goback" href="#" rel="nofollow">返回顶部</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+        <script src="./static/script/calc.js"></script>
+    <script src="./static/script/app.js"></script>
+</body>
+</html>

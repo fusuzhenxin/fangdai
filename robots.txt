@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: www.fangdailix.top
+Sitemap: https://www.fangdailix.top/sitemap.xml

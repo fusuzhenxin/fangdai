@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="all">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>提前还贷计算器2026_提前还款划不划算_部分提前还贷少还多少利息</title>
+    <link rel="canonical" href="https://www.fangdailix.top/huankuan.html" />
+    <meta property="og:url" content="https://www.fangdailix.top/huankuan.html" />
+    <meta property="og:site_name" content="www.fangdailix.top" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="提前还贷计算器,提前还款计算器,提前还贷划不划算,部分提前还贷,提前结清房贷,缩短年限还是减少月供" />
+    <meta name="description" content="提前还贷计算器按剩余本金测算部分还清或全部结清后的利息节省，支持月供不变缩短年限、年限不变降低月供两种方案，判断现在提前还贷是否划算。" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./static/style/common.css">
+    <link rel="stylesheet" href="./static/style/index.css" />
+    <link rel="stylesheet" href="./static/style/extra.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="mod-head">
+                <div class="bd">
+                    <div class="inner">
+                        <a class="logo" href="./index.html">
+                            <img src="./static/image/logo.png" alt="房贷计算器">
+                        </a>
+                        <nav>
+                            <ul>
+                                <li><a href="./index.html">商业贷款</a></li>
+                                <li><a href="./gongjijin.html">公积金贷款</a></li>
+                                <li><a href="./zuhedai.html">组合贷款</a></li>
+                                <li><a href="./zhuangxiu.html">装修贷款</a></li>
+                                <li class="active"><a href="./huankuan.html">提前还贷</a></li>
+                                <li><a href="./tiaoxi.html">利率变动</a></li>
+                                <li><a href="./fansuan.html">贷款反算</a></li>
+                                <li><a href="./shuifei.html">购房税费</a></li>
+                                <li><a href="./pinggu.html">购房评估</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-tip">
+                <div class="bd">计算结果仅供参考</div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="layout-container inner">
+                <main class="main">
+                    <section class="mod-panel">
+                        <div class="hd">
+                            <h1>
+                                <img src="./static/image/icon-hd.png" width="32" height="32" />
+                                <span>提前还贷计算器</span>
+                            </h1>
+                        </div>
+                        <div class="bd">
+                            <div id="input" class="input-group">
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>原贷款合同</span></div>
+                                    <div class="input-content">
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>贷款金额</span></div>
+                                            <div class="field-content">
+                                                <div class="field-row">
+                                                    <input class="J_formatMoney" type="number" name="old_loanAmount"
+                                                        value="" step="1" min="0" />
+                                                    <span>元</span>
+                                                </div>
+                                                <div class="field-row field-tip"></div>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>贷款利率</span></div>
+                                            <div class="field-content">
+                                                <input type="number" name="old_loanRate" value="" step="0.01" min="0" />
+                                                <span>%</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>贷款期限</span></div>
+                                            <div class="field-content">
+                                                <select name="old_loanPeriod">
+                                                    <option value="0">自定义贷款期限</option>
+                                                    <option value="12">1年(12期)</option>
+                                                    <option value="24">2年(24期)</option>
+                                                    <option value="36">3年(36期)</option>
+                                                    <option value="48">4年(48期)</option>
+                                                    <option value="60">5年(60期)</option>
+                                                    <option value="72">6年(72期)</option>
+                                                    <option value="84">7年(84期)</option>
+                                                    <option value="96">8年(96期)</option>
+                                                    <option value="108">9年(108期)</option>
+                                                    <option value="120">10年(120期)</option>
+                                                    <option value="132">11年(132期)</option>
+                                                    <option value="144">12年(144期)</option>
+                                                    <option value="156">13年(156期)</option>
+                                                    <option value="168">14年(168期)</option>
+                                                    <option value="180">15年(180期)</option>
+                                                    <option value="192">16年(192期)</option>
+                                                    <option value="204">17年(204期)</option>
+                                                    <option value="216">18年(216期)</option>
+                                                    <option value="228">19年(228期)</option>
+                                                    <option value="240">20年(240期)</option>
+                                                    <option value="252">21年(252期)</option>
+                                                    <option value="264">22年(264期)</option>
+                                                    <option value="276">23年(276期)</option>
+                                                    <option value="288">24年(288期)</option>
+                                                    <option value="300">25年(300期)</option>
+                                                    <option value="312">26年(312期)</option>
+                                                    <option value="324">27年(324期)</option>
+                                                    <option value="336">28年(336期)</option>
+                                                    <option value="348">29年(348期)</option>
+                                                    <option value="360" selected="selected">30年(360期)</option>
+                                                </select>
+                                                <input type="number" name="old_customPeriod" placeholder="输入贷款期限(月)"
+                                                    step="1" min="1" max="360" />
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>还款方式</span></div>
+                                            <div class="field-content">
+                                                <label>
+                                                    <input type="radio" name="old_loanMethod" value="linear"
+                                                        checked="checked">
+                                                    <span>等额本金</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="old_loanMethod" value="annuity">
+                                                    <span>等额本息</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>合同生效</span></div>
+                                    <div class="input-content">
+                                        <input type="month" name="old_loanDate" />
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>还款日期</span></div>
+                                    <div class="input-content">
+                                        <input type="month" name="repay_payDate" />
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="input-title"><span>还款方式</span></div>
+                                    <div class="input-content">
+                                        <label>
+                                            <input type="radio" name="repay_payMethod" value="part" checked="checked">
+                                            <span>部分提前还清</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="repay_payMethod" value="all">
+                                            <span>全部提前还清</span>
+                                        </label>
+                                    </div>
+                                    <div class="J_payMode input-content" data-mode="part">
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>还款金额</span></div>
+                                            <div class="field-content">
+                                                <div class="field-row">
+                                                    <input class="J_formatMoney" type="number" name="repay_payAmount"
+                                                        value="" step="1" min="0" />
+                                                    <span>元</span>
+                                                </div>
+                                                <div class="field-row field-tip"></div>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>调整方案</span></div>
+                                            <div class="field-content">
+                                                <select name="repay_adjustMethod">
+                                                    <option value="samePay">月供基本不变</option>
+                                                    <option value="samePeriod">还款期限不变</option>
+                                                    <option value="changePay">调整月供金额</option>
+                                                    <option value="changePeriod">调整还款期限</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="J_adjustMode field-wrapper" data-mode="changePay">
+                                            <div class="field-title"><span>月供金额</span></div>
+                                            <div class="field-content">
+                                                <input type="number" name="new_loanPay" value="" step="0.01" min="0" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="J_adjustMode field-wrapper" data-mode="changePeriod">
+                                            <div class="field-title"><span>贷款期数</span></div>
+                                            <div class="field-content">
+                                                <input type="number" name="new_loanPeriod" value="" step="1" min="0" />
+                                                <span>期(月)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="J_payMode input-wrapper" data-mode="part">
+                                    <div class="input-title"><span>新贷款合同</span></div>
+                                    <div class="input-content">
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>贷款利率</span></div>
+                                            <div class="field-content">
+                                                <input type="number" name="new_loanRate" value="" step="0.01" min="0" />
+                                                <span>%</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title"><span>还款方式</span></div>
+                                            <div class="field-content">
+                                                <label>
+                                                    <input type="radio" name="new_loanMethod" value="linear"
+                                                        checked="checked">
+                                                    <span>等额本金</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="new_loanMethod" value="annuity">
+                                                    <span>等额本息</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="result" class="input-group">
+                                <div class="input-wrapper">
+                                    <div class="input-content">
+                                        <button class="J_computeLoan btn">计算</button>
+                                        <button class="J_resetPanel btn btn-gray">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ft">
+                            <div class="result">
+                                <div class="box" data-type="detail">
+                                    <div class="c-hd">详细计算结果</div>
+                                    <div class="c-bd">
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">已还期数</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanIndex" value=""
+                                                    readonly="readonly" />
+                                                <span>期</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">已还本息</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_alreadyPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">已还本金</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_alreadyCost" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">已还利息</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_alreadyInterest" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">剩余本息</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_remainPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">剩余本金</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_remainCost" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">剩余利息</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_remainInterest" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">还款金额</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_payAmount" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper field-wrapper-2">
+                                            <div class="field-title">节省利息</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_diffInterest" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ft">
+                                        <p>
+                                            <button class="J_viewDetail btn btn-orange"
+                                                data-type="detail">查看月供明细</button>
+                                        </p>
+                                        <p>
+                                            <button class="J_resetPanel btn btn-gray">重置</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result">
+                                <div class="box" data-type="old">
+                                    <div class="c-hd"><strong class="text-blue">原贷款合同</strong>计算结果</div>
+                                    <div class="c-bd">
+                                        <div class="summary-box">
+                                            <div class="compute">
+                                                <div class="item">
+                                                    <p class="value totalPay">?万</p>
+                                                    <p class="name">还款总额</p>
+                                                </div>
+                                                <div class="operator">
+                                                    <p>=</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value totalCost">?万</p>
+                                                    <p class="name">贷款总额</p>
+                                                </div>
+                                                <div class="operator">
+                                                    <p>+</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value totalInterest">?万</p>
+                                                    <p class="name">利息总额</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value loanPeriod">?年</p>
+                                                    <p class="name">贷款年限</p>
+                                                </div>
+                                            </div>
+                                            <div class="range">
+                                                <div class="bar bar-cost">
+                                                    <span>贷款</span>
+                                                </div>
+                                                <div class="bar bar-interest">
+                                                    <span>利息</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款金额</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanAmount" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款期限</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanPeriod" value=""
+                                                    readonly="readonly" />
+                                                <span>期(月)</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款利率</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanRate" value=""
+                                                    readonly="readonly" />
+                                                <span>%</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">还款方式</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanMethod" value=""
+                                                    readonly="readonly" />
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">首月还款</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_currentPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">每月递减</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_periodDecrease" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">末月还款</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_lastPay" value="" readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">利息总额</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_totalInterest" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">本息合计</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_totalPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ft">
+                                        <p>
+                                            <button class="J_viewDetail btn btn-blue" data-type="old">查看月供明细</button>
+                                        </p>
+                                        <p>
+                                            <button class="J_resetPanel btn btn-gray">重置</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="box" data-type="new">
+                                    <div class="c-hd"><strong class="text-green">新贷款合同</strong>计算结果</div>
+                                    <div class="c-bd">
+                                        <div class="summary-box">
+                                            <div class="compute">
+                                                <div class="item">
+                                                    <p class="value totalPay">?万</p>
+                                                    <p class="name">还款总额</p>
+                                                </div>
+                                                <div class="operator">
+                                                    <p>=</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value totalCost">?万</p>
+                                                    <p class="name">贷款总额</p>
+                                                </div>
+                                                <div class="operator">
+                                                    <p>+</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value totalInterest">?万</p>
+                                                    <p class="name">利息总额</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="value loanPeriod">?年</p>
+                                                    <p class="name">贷款年限</p>
+                                                </div>
+                                            </div>
+                                            <div class="range">
+                                                <div class="bar bar-cost">
+                                                    <span>贷款</span>
+                                                </div>
+                                                <div class="bar bar-interest">
+                                                    <span>利息</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款金额</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanAmount" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款期限</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanPeriod" value=""
+                                                    readonly="readonly" />
+                                                <span>期(月)</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">贷款利率</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanRate" value=""
+                                                    readonly="readonly" />
+                                                <span>%</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">还款方式</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_loanMethod" value=""
+                                                    readonly="readonly" />
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">首月还款</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_currentPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">每月递减</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_periodDecrease" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">末月还款</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_lastPay" value="" readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">利息总额</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_totalInterest" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-wrapper">
+                                            <div class="field-title">本息合计</div>
+                                            <div class="field-content">
+                                                <input type="text" name="result_totalPay" value=""
+                                                    readonly="readonly" />
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ft">
+                                        <p>
+                                            <button class="J_viewDetail btn btn-green" data-type="new">查看月供明细</button>
+                                        </p>
+                                        <p>
+                                            <button class="J_resetPanel btn btn-gray">重置</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <aside class="side">
+                    <section class="mod-rate">
+                        <div class="bd">
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-bank.png" width="20" height="20" alt="人民银行">
+                                            <a href="./lilv.html">央行最新商业贷款基准利率(LPR)</a>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a class="more" href="./lilv.html" target="_blank">房贷利率</a>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年期</td>
+                                            <td>3.00%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>3.50%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2026年08月20日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-interest.png" width="20" height="20"
+                                                alt="银行利息">
+                                            <span>商业贷款基准利率(2019年以前)</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>年限</th>
+                                            <th>利率</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1年以内(含1年)</td>
+                                            <td>4.35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1年至5年(含5年)</td>
+                                            <td>4.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>4.9</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-house.png" width="20" height="20" alt="房屋贷款">
+                                            <span>住房公积金个人住房贷款利率</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="40%">年限</th>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5年以下(含5年)</td>
+                                            <td>2.1%</td>
+                                            <td>2.525%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5年以上</td>
+                                            <td>2.60%</td>
+                                            <td>3.075%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2025年5月7日更新</p>
+                            </div>
+                            <div class="table-box">
+                                <table>
+                                    <caption>
+                                        <h2>
+                                            <img src="./static/image/icon-ratio.png" width="20" height="20" alt="房屋贷款">
+                                            <span>商业住房贷款最低首付款比例</span>
+                                        </h2>
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th>首套住房</th>
+                                            <th>二套住房</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>15%</td>
+                                            <td>15%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="update">2024年9月24日更新</p>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+            <div class="inner">
+                <section class="mod-intro">
+                    <div class="box">
+                        <h3>
+                            <img src="./static/image/icon-hd2.png" width="32" height="32" alt="还款">
+                            <span>提前还贷计算器：现在结清划不划算</span>
+                        </h3>
+                        <p>提前还贷计算器按已还期数算出剩余本金，再模拟部分还款或全部结清。支持「月供基本不变缩短年限」和「年限不变降低月供」，直接给出能少还多少利息，回答「提前还贷划不划算」「先还商贷还是先还公积金」。</p>
+                        <p><strong>1.
+                                一次提前还清：</strong>指的是一次还清剩余本金和利息。如申请房贷时就有提前还清的打算，建议当时选择等额本金的还款方式，还款期每月还的本金较多，因而可以节省一笔利息。值得注意的是，公积金贷款必须还款满一年后才能申请一次提前还清。
+                        </p>
+                        <p><strong>2.
+                                部分提前还清：</strong>包括缩短还款年限和减少每月还款额两种方式。同样，依据现有公积金政策，必须还款满一年后才能申请部分提前还款，且还款额必须是一万元的整数倍，每次还款金额不得低于6个月的贷款本息额。
+                        </p>
+                        <br>
+                        <p>各家银行对于提前还贷并没有次数的限制，可以一次全部还清，也可部分归还贷款。只是每次还贷的起点金额各银行规定不一，有的规定是1万元或1万元的倍数，有的银行则规定千元以上就可以提前部分还贷。
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="inner">
+                <div class="mod-foot">
+                    <div class="bd">
+                                                <p class="link">
+                            <a href="./index.html">房贷计算器</a>
+                            <a href="./gongjijin.html">公积金贷款计算器</a>
+                            <a href="./zuhedai.html">组合贷款计算器</a>
+                            <a href="./huankuan.html">提前还贷计算器</a>
+                            <a href="./tiaoxi.html">利率下调计算器</a>
+                            <a href="./fansuan.html">房贷反算</a>
+                            <a href="./shuifei.html">购房税费计算器</a>
+                            <a href="./pinggu.html">购房能力评估</a>
+                            <a href="./lilv.html">最新LPR利率</a>
+                            <a href="./daikuanedu.html">公积金贷款额度</a>
+                            <a href="./zhuangxiu.html">装修贷款计算器</a>
+                        </p>
+                        <p>
+                            <a href="https://www.fangdailix.top/">www.fangdailix.top</a>
+                            <span>Copyright &copy; 2026</span>
+                            <span>在线房贷计算器 · 结果仅供参考</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mod-fixedbar">
+                    <div class="bd">
+                        <a class="goback" href="#" rel="nofollow">返回顶部</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+        <script src="./static/script/calc.js"></script>
+    <script src="./static/script/app.js"></script>
+</body>
+</html>

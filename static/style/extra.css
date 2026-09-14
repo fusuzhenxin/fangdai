@@ -1,0 +1,26 @@
+.mod-panel input[name="customPeriod"],
+.mod-panel input[name="old_customPeriod"]{display:none;margin-left:8px}
+.mod-panel.is-custom-period input[name="customPeriod"],
+.mod-panel.is-custom-period input[name="old_customPeriod"],
+.mod-panel .is-custom-period input[name="customPeriod"],
+.mod-panel .is-custom-period input[name="old_customPeriod"]{display:inline-block}
+.detail-mask{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.45);padding:20px}
+.detail-mask.show{display:flex}
+.detail-dialog{width:min(920px,100%);max-height:86vh;overflow:auto;background:#fff;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.2)}
+.detail-dialog .d-hd{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#018cd7;color:#fff}
+.detail-dialog .d-hd h3{font-size:16px;font-weight:bold}
+.detail-dialog .d-hd button{height:30px;padding:0 12px;border:0;border-radius:4px;background:#fff;color:#018cd7;cursor:pointer}
+.detail-dialog .d-bd{padding:16px 18px 24px}
+.detail-dialog table{width:100%;border-collapse:collapse}
+.detail-dialog th,.detail-dialog td{padding:8px 10px;border:1px solid #cee1ee;text-align:center;font-size:13px}
+.detail-dialog thead th{background:#e3eef8;color:#555;white-space:nowrap}
+.detail-dialog tbody tr:nth-child(even){background:#f7fbff}
+.detail-dialog .d-sum{margin-bottom:12px;line-height:22px;color:#546d7e}
+.toast{position:fixed;left:50%;top:18%;z-index:300;transform:translateX(-50%);padding:10px 18px;background:rgba(0,0,0,.78);color:#fff;border-radius:6px;font-size:14px;display:none}
+.toast.show{display:block}
+.container .btn-small{min-width:auto;height:30px;line-height:28px;padding:0 12px;font-size:13px}
+@media screen and (max-width:799px){
+  .detail-dialog{max-height:92vh}
+  .detail-dialog .d-bd{padding:10px}
+  .detail-dialog th,.detail-dialog td{padding:6px 4px;font-size:12px}
+}
